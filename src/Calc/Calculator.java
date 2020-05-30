@@ -54,7 +54,7 @@ public class Calculator {
             //if the currency is found in the xml file
             if(isCurrencyFound){
                 float convertedValue = amount * rate;   //calculate the value
-                System.out.println(new DecimalFormat("##.##").setDecimalFormatSymbols().format(convertedValue));  //print converted value
+                System.out.println(new DecimalFormat("##.##").format(convertedValue));  //print converted value
             }
             //if the currency is not found
             else {
