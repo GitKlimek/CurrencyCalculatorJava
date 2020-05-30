@@ -11,6 +11,7 @@ import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 import java.io.IOException;
 import java.text.DecimalFormat;
+import java.text.DecimalFormatSymbols;
 
 public class Calculator {
 
@@ -53,7 +54,7 @@ public class Calculator {
             //if the currency is found in the xml file
             if(isCurrencyFound){
                 float convertedValue = amount * rate;   //calculate the value
-                System.out.println(new DecimalFormat("##.##").format(convertedValue));  //print converted value
+                System.out.println(new DecimalFormat("##.##").setDecimalFormatSymbols().format(convertedValue));  //print converted value
             }
             //if the currency is not found
             else {
